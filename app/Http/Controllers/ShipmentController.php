@@ -38,6 +38,13 @@ class ShipmentController extends Controller
             'plate' => 'required|string|max:255',
             'tonnage' => 'required|string|max:255',
             'pdf' => 'nullable|mimes:pdf|max:10240',
+            'exporter_name' => 'nullable|string|max:255',
+            'exporter_id' => 'nullable|string|max:255',
+            'exporter_address' => 'nullable|string|max:255',
+            'exporter_order' => 'nullable|string|max:255',
+            'consignee_name' => 'nullable|string|max:255',
+            'consignee_address' => 'nullable|string|max:255',
+            'consignee_country' => 'nullable|string|max:255',
         ]);
 
         $data = $request->except('pdf');
@@ -80,6 +87,13 @@ class ShipmentController extends Controller
             'plate' => 'required|string|max:255',
             'tonnage' => 'required|string|max:255',
             'pdf' => 'nullable|mimes:pdf|max:10240',
+            'exporter_name' => 'nullable|string|max:255',
+            'exporter_id' => 'nullable|string|max:255',
+            'exporter_address' => 'nullable|string|max:255',
+            'exporter_order' => 'nullable|string|max:255',
+            'consignee_name' => 'nullable|string|max:255',
+            'consignee_address' => 'nullable|string|max:255',
+            'consignee_country' => 'nullable|string|max:255',
         ]);
 
         $data = $request->except('pdf');

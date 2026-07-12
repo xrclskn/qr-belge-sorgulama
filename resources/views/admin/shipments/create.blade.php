@@ -39,7 +39,47 @@
                                 <p class="text-xs text-slate-400 mt-2">Değeri Kg cinsinden sadece sayı olarak girebilirsiniz.</p>
                             </div>
 
-                            <div class="md:col-span-2">
+                            <div class="md:col-span-2 mt-4 pt-4 border-t border-slate-100">
+                                <h3 class="text-lg font-bold text-slate-800 mb-4">Exporter (İhracatçı Bilgileri)</h3>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div>
+                                        <label class="block text-sm font-semibold text-slate-700 mb-2">Company Name (Firma Adı)</label>
+                                        <input type="text" name="exporter_name" class="block w-full px-4 py-3 rounded-xl border-slate-200 bg-slate-50 text-slate-800 focus:border-[#176b87] focus:ring focus:ring-[#176b87]/20 transition-all duration-200" placeholder="Örn: SHAHIR TEJARAT...">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-semibold text-slate-700 mb-2">Commercial ID (Ticari ID)</label>
+                                        <input type="text" name="exporter_id" class="block w-full px-4 py-3 rounded-xl border-slate-200 bg-slate-50 text-slate-800 focus:border-[#176b87] focus:ring focus:ring-[#176b87]/20 transition-all duration-200" placeholder="Örn: 14012706814">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-semibold text-slate-700 mb-2">Address (Adres)</label>
+                                        <input type="text" name="exporter_address" class="block w-full px-4 py-3 rounded-xl border-slate-200 bg-slate-50 text-slate-800 focus:border-[#176b87] focus:ring focus:ring-[#176b87]/20 transition-all duration-200" placeholder="Örn: ., ., Tabriz">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-semibold text-slate-700 mb-2">By Order (Sipariş Veren)</label>
+                                        <input type="text" name="exporter_order" class="block w-full px-4 py-3 rounded-xl border-slate-200 bg-slate-50 text-slate-800 focus:border-[#176b87] focus:ring focus:ring-[#176b87]/20 transition-all duration-200" placeholder="Örn: JAM TABRIZ STEEL CO">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="md:col-span-2 mt-4 pt-4 border-t border-slate-100">
+                                <h3 class="text-lg font-bold text-slate-800 mb-4">Consignee (Alıcı Bilgileri)</h3>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div>
+                                        <label class="block text-sm font-semibold text-slate-700 mb-2">Consignee Name (Alıcı Adı)</label>
+                                        <input type="text" name="consignee_name" class="block w-full px-4 py-3 rounded-xl border-slate-200 bg-slate-50 text-slate-800 focus:border-[#176b87] focus:ring focus:ring-[#176b87]/20 transition-all duration-200" placeholder="Örn: YASER HAJ HAMDA">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-semibold text-slate-700 mb-2">Destination Country (Varış Ülkesi)</label>
+                                        <input type="text" name="consignee_country" class="block w-full px-4 py-3 rounded-xl border-slate-200 bg-slate-50 text-slate-800 focus:border-[#176b87] focus:ring focus:ring-[#176b87]/20 transition-all duration-200" placeholder="Örn: Syrian Arab Republic">
+                                    </div>
+                                    <div class="md:col-span-2">
+                                        <label class="block text-sm font-semibold text-slate-700 mb-2">Address (Adres)</label>
+                                        <input type="text" name="consignee_address" class="block w-full px-4 py-3 rounded-xl border-slate-200 bg-slate-50 text-slate-800 focus:border-[#176b87] focus:ring focus:ring-[#176b87]/20 transition-all duration-200" placeholder="Örn: SYRIA">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="md:col-span-2 mt-4 pt-4 border-t border-slate-100">
                                 <label class="block text-sm font-semibold text-slate-700 mb-2">PDF Belgesi (Opsiyonel)</label>
                                 <input type="file" name="pdf" accept=".pdf" class="block w-full text-sm text-slate-500 file:mr-4 file:py-3 file:px-4 file:rounded-xl file:border-0 file:text-sm file:font-semibold file:bg-[#176b87]/10 file:text-[#176b87] hover:file:bg-[#176b87]/20 transition-all border border-slate-200 rounded-xl bg-slate-50">
                                 <p class="text-xs text-slate-400 mt-2">Sadece PDF formatında ve maksimum 10MB boyutunda dosya yükleyebilirsiniz.</p>

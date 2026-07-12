@@ -307,16 +307,16 @@
                                 </div>
                                 <div class="data-field">
                                     <span class="data-label">Company Name :</span>
-                                    <span class="data-value">SHAHIR TEJARAT AZARBAIJAN MAKU FREE ZONE</span>
+                                    <span class="data-value">{{ $shipment->exporter_name ?? 'SHAHIR TEJARAT AZARBAIJAN MAKU FREE ZONE' }}</span>
                                 </div>
                                 
                                 <div class="data-field">
-                                    <span class="data-label">Name :</span>
-                                    <span class="data-value">EHSAN ABDOLAH POUR TEKMEH</span>
+                                    <span class="data-label">Commercial ID :</span>
+                                    <span class="data-value">{{ $shipment->exporter_id ?? '14012706814' }}</span>
                                 </div>
                                 <div class="data-field">
                                     <span class="data-label">Address :</span>
-                                    <span class="data-value">. . Tabriz null null</span>
+                                    <span class="data-value">{{ $shipment->exporter_address ?? '. . Tabriz null null' }}</span>
                                 </div>
                                 
                                 <div class="data-field inline">
@@ -324,8 +324,8 @@
                                     <span class="data-value">09111111111</span>
                                 </div>
                                 <div class="data-field">
-                                    <span class="data-label">On behalf of :</span>
-                                    <span class="data-value">JAM TABRIZ STEEL CO</span>
+                                    <span class="data-label">By Order :</span>
+                                    <span class="data-value">{{ $shipment->exporter_order ?? 'JAM TABRIZ STEEL CO' }}</span>
                                 </div>
                             </div>
                         </div>
@@ -346,16 +346,16 @@
                             <div class="data-grid">
                                 <div class="data-field">
                                     <span class="data-label">Destination Country :</span>
-                                    <span class="data-value">Syrian Arab Republic</span>
+                                    <span class="data-value">{{ $shipment->consignee_country ?? 'Syrian Arab Republic' }}</span>
                                 </div>
                                 <div class="data-field inline">
                                     <span class="data-label">Consignee Name :</span>
-                                    <span class="data-value">YASER HAJ HAMDA</span>
+                                    <span class="data-value">{{ $shipment->consignee_name ?? 'YASER HAJ HAMDA' }}</span>
                                 </div>
                                 
                                 <div class="data-field inline">
                                     <span class="data-label">Consignee Address :</span>
-                                    <span class="data-value">SYRIA</span>
+                                    <span class="data-value">{{ $shipment->consignee_address ?? 'SYRIA' }}</span>
                                 </div>
                                 <div class="data-field inline">
                                     <span class="data-label">Notify to :</span>

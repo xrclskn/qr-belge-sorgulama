@@ -42,7 +42,47 @@
                                     <input type="text" name="tonnage" value="{{ $shipment->tonnage }}" class="block w-full px-4 py-3 rounded-xl border-slate-200 bg-slate-50 text-slate-800 focus:border-[#176b87] focus:ring focus:ring-[#176b87]/20 transition-all duration-200" required>
                                 </div>
 
-                                <div class="md:col-span-2">
+                                <div class="md:col-span-2 mt-4 pt-4 border-t border-slate-100">
+                                    <h3 class="text-lg font-bold text-slate-800 mb-4">Exporter (İhracatçı Bilgileri)</h3>
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                        <div>
+                                            <label class="block text-sm font-semibold text-slate-700 mb-2">Company Name (Firma Adı)</label>
+                                            <input type="text" name="exporter_name" value="{{ $shipment->exporter_name }}" class="block w-full px-4 py-3 rounded-xl border-slate-200 bg-slate-50 text-slate-800 focus:border-[#176b87] focus:ring focus:ring-[#176b87]/20 transition-all duration-200">
+                                        </div>
+                                        <div>
+                                            <label class="block text-sm font-semibold text-slate-700 mb-2">Commercial ID (Ticari ID)</label>
+                                            <input type="text" name="exporter_id" value="{{ $shipment->exporter_id }}" class="block w-full px-4 py-3 rounded-xl border-slate-200 bg-slate-50 text-slate-800 focus:border-[#176b87] focus:ring focus:ring-[#176b87]/20 transition-all duration-200">
+                                        </div>
+                                        <div>
+                                            <label class="block text-sm font-semibold text-slate-700 mb-2">Address (Adres)</label>
+                                            <input type="text" name="exporter_address" value="{{ $shipment->exporter_address }}" class="block w-full px-4 py-3 rounded-xl border-slate-200 bg-slate-50 text-slate-800 focus:border-[#176b87] focus:ring focus:ring-[#176b87]/20 transition-all duration-200">
+                                        </div>
+                                        <div>
+                                            <label class="block text-sm font-semibold text-slate-700 mb-2">By Order (Sipariş Veren)</label>
+                                            <input type="text" name="exporter_order" value="{{ $shipment->exporter_order }}" class="block w-full px-4 py-3 rounded-xl border-slate-200 bg-slate-50 text-slate-800 focus:border-[#176b87] focus:ring focus:ring-[#176b87]/20 transition-all duration-200">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="md:col-span-2 mt-4 pt-4 border-t border-slate-100">
+                                    <h3 class="text-lg font-bold text-slate-800 mb-4">Consignee (Alıcı Bilgileri)</h3>
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                        <div>
+                                            <label class="block text-sm font-semibold text-slate-700 mb-2">Consignee Name (Alıcı Adı)</label>
+                                            <input type="text" name="consignee_name" value="{{ $shipment->consignee_name }}" class="block w-full px-4 py-3 rounded-xl border-slate-200 bg-slate-50 text-slate-800 focus:border-[#176b87] focus:ring focus:ring-[#176b87]/20 transition-all duration-200">
+                                        </div>
+                                        <div>
+                                            <label class="block text-sm font-semibold text-slate-700 mb-2">Destination Country (Varış Ülkesi)</label>
+                                            <input type="text" name="consignee_country" value="{{ $shipment->consignee_country }}" class="block w-full px-4 py-3 rounded-xl border-slate-200 bg-slate-50 text-slate-800 focus:border-[#176b87] focus:ring focus:ring-[#176b87]/20 transition-all duration-200">
+                                        </div>
+                                        <div class="md:col-span-2">
+                                            <label class="block text-sm font-semibold text-slate-700 mb-2">Address (Adres)</label>
+                                            <input type="text" name="consignee_address" value="{{ $shipment->consignee_address }}" class="block w-full px-4 py-3 rounded-xl border-slate-200 bg-slate-50 text-slate-800 focus:border-[#176b87] focus:ring focus:ring-[#176b87]/20 transition-all duration-200">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="md:col-span-2 mt-4 pt-4 border-t border-slate-100">
                                     <label class="block text-sm font-semibold text-slate-700 mb-2">PDF Belgesi Güncelle (Opsiyonel)</label>
                                     <input type="file" name="pdf" accept=".pdf" class="block w-full text-sm text-slate-500 file:mr-4 file:py-3 file:px-4 file:rounded-xl file:border-0 file:text-sm file:font-semibold file:bg-[#176b87]/10 file:text-[#176b87] hover:file:bg-[#176b87]/20 transition-all border border-slate-200 rounded-xl bg-slate-50">
                                     @if($shipment->pdf_path)
