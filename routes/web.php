@@ -10,6 +10,17 @@ Route::get('/', function () {
 Route::get('/verify/{qr_code}', [\App\Http\Controllers\VerificationController::class, 'verify'])->name('verify');
 Route::post('/verify/manual', [\App\Http\Controllers\VerificationController::class, 'manualVerify'])->name('verify.manual');
 
+Route::get('/create-storage-link', function () {
+    // Delete existing public/storage if it exists as a directory
+    if (file_exists(public_path('storage'))) {
+        // If it's a symlink or empty dir, we try to remove it.
+        @unlink(public_path('storage'));
+        @rmdir(public_path('storage'));
+    }
+    \Illuminate\Support\Facades\Artisan::call('storage:link');
+    return 'Storage link created! You can now remove this route.';
+});
+
 Route::middleware(['auth', 'verified'])->prefix('admin')->name('admin.')->group(function () {
     Route::get('/dashboard', [\App\Http\Controllers\ShipmentController::class, 'index'])->name('dashboard');
     Route::resource('shipments', \App\Http\Controllers\ShipmentController::class);

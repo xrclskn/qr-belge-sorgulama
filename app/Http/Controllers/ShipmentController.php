@@ -34,7 +34,7 @@ class ShipmentController extends Controller
     {
         $request->validate([
             'serial_no' => 'required|string|max:255',
-            'date' => 'required|date',
+            'date' => 'required|date|after_or_equal:1900-01-01|before_or_equal:2100-12-31',
             'plate' => 'required|string|max:255',
             'tonnage' => 'required|string|max:255',
             'pdf' => 'nullable|mimes:pdf|max:10240',
@@ -76,7 +76,7 @@ class ShipmentController extends Controller
     {
         $request->validate([
             'serial_no' => 'required|string|max:255',
-            'date' => 'required|date',
+            'date' => 'required|date|after_or_equal:1900-01-01|before_or_equal:2100-12-31',
             'plate' => 'required|string|max:255',
             'tonnage' => 'required|string|max:255',
             'pdf' => 'nullable|mimes:pdf|max:10240',

@@ -393,21 +393,47 @@ body::before {
    ========================================================================== */
 @media (max-width: 768px) {
     .container {
-        padding: 1rem;
+        padding: 0.5rem;
     }
     
     .verification-card {
-        padding: 2rem;
-        gap: 2rem;
+        padding: 1.5rem;
+        gap: 1.5rem;
+        height: 90vh; /* Allow a bit more height on mobile */
     }
 
-    
+    .card-title {
+        font-size: 1.25rem;
+    }
+
     .accordion {
         padding-right: 0;
+        gap: 1.5rem;
+    }
+
+    .accordion-header .title {
+        white-space: normal;
+        word-break: break-word;
+    }
+
+    .content-inner {
+        padding: 1rem 0 0.5rem 1rem;
+    }
+
+    .data-grid {
+        grid-template-columns: 1fr; /* Switch to 1 column on mobile */
+        gap: 1rem;
+    }
+
+    .data-field.inline {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.2rem;
     }
 
     .card-actions {
         flex-direction: column;
+        padding-top: 1rem;
     }
 
     .btn {
